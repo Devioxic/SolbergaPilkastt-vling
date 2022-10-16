@@ -1,0 +1,44 @@
+﻿@model SolbergaPilkasttävling.Models.Elev
+@{
+}
+
+<h1>Resultat</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <p>Förnamn</p>
+            </th>
+            <th>
+                <p>Efternamn</p>
+            </th>
+            <th>
+                <p>Klass</p>
+            </th>
+            <th>
+                <p>Poäng</p>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ElevLista)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.FörNamn)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.EfterNamn)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Klass)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Poäng)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
